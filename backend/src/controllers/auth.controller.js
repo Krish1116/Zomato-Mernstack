@@ -1,7 +1,7 @@
-const userModel = require("../modals/user.model.js");
+const userModel = require("../modals/user.modal.js");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const foodPartnerModel = require("../modals/foodpartner.model.js");
+const foodPartnerModel = require("../modals/foodpartner.modal.js");
 
 async function registerUser(req, res) {
   console.log("🚀 ~ registerUser ~ registerUser:");
@@ -102,7 +102,7 @@ async function registerFoodPartner(req, res) {
     password: hashPass,
   });
 
-  const token = jwt.sign({ id: foodPartnerModel._id }, process.env.JWT_SECRET);
+  const token = jwt.sign({ id: foorPartner._id }, process.env.JWT_SECRET);
   res.cookie("token", token);
 
   res.status(201).json({
@@ -133,7 +133,7 @@ async function loginFoodPartner(req, res) {
     });
   }
 
-  const token = jwt.sign({ id: foodPartnerModel._id }, process.env.JWT_SECRET);
+  const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
 
   res.cookie("token", token);
 
