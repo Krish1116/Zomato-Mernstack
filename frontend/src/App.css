@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --text-color: #343a40;
+  --light-theme: #ffffff;
+  --dark-theme: #121416;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+}
+
+.container h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--light-theme);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  color: var(--light-theme);
+}
+
+.container.dark-mode {
+  background-color: var(--dark-theme);
+  color: var(--light-theme);
+}
+
+.container.dark-mode .form-group input {
+  border-color: var(--light-theme);
+}
+
+.container.dark-mode .btn-primary {
+  background-color: var(--secondary-color);
+  color: var(--dark-theme);
+}
